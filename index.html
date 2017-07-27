@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>JavaScript GitHub API with XHR</title>
+    <script
+    src="http://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="node_modules/mocha/mocha.css">
     <style>
        .flexbox-container {
@@ -21,6 +25,11 @@
     </style>
     </head>
     <body>
+      <br>
+      <form class="username" id="user-form" action="index.html" method="post">
+        <input type="text" name="username" id="username" placeholder="username">
+        <input type="submit" value="submit">
+      </form>
     <main id="main">
     </main>
     <div class="flexbox-container">
@@ -33,6 +42,10 @@
         <div id="details"></div>
       </div>
     </div>
+    <script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
