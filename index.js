@@ -18,7 +18,8 @@ function formInput(){
 };
 
 function getRepositories(){
-  let username = $('#username').val()
+  let username = document.getElementById('username').value
+  // $('#username').val()
   // debugger
   const req = new XMLHttpRequest()
   // debugger
@@ -41,11 +42,13 @@ function displayRepositories(event, data){
 // https://github.com/octocat/hello-worId/commits/master
 
 function getCommits(el){
-  let username = $('#username').val()
-  let name = el.dataset.repo
+  // let username = $('#username').val()
+  let username = document.getElementById('username').value
+  var repoName = el.dataset.repo
+  // debugger
   let request = new XMLHttpRequest()
   request.addEventListener('load', displayCommits)
-  request.open("GET", `https://api.github.com/repos/${username}/${name}/commits`)
+  request.open("GET", `https://api.github.com/repos/${username}/${repoName}/commits`)
   request.send()
 }
 
@@ -59,7 +62,8 @@ function displayCommits(){
 }
 
 function getBranches(el){
-  let username = $('#username').val()
+  // let username = $('#username').val()
+  let username = document.getElementById('username').value
   let repo = el.dataset.repo
   let request = new XMLHttpRequest()
   request.addEventListener('load', displayBranches)
